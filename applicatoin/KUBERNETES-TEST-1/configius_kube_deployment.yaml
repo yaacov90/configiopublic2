@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    app: configius-KUBERNETES-TEST-1
-  name: configius-KUBERNETES-TEST-1
+    app: configius-kubernetest-test-1
+  name: configius-kubernetest-test-1
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: configius-fe
-  namespace: configius-KUBERNETES-TEST-1
+  namespace: configius-kubernetest-test-1
   name: configius-fe
 spec:
   replicas: 2
@@ -37,7 +37,7 @@ kind: Deployment
 metadata:
   labels:
     app: configius-be
-  namespace: configius-KUBERNETES-TEST-1
+  namespace: configius-kubernetest-test-1
   name: configius-be
 spec:
   replicas: 2
@@ -75,7 +75,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: configius-fe
-  namespace: configius-KUBERNETES-TEST-1
+  namespace: configius-kubernetest-test-1
   labels:
     app: configius-fe
 spec:
@@ -93,7 +93,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: configius-be
-  namespace: configius-KUBERNETES-TEST-1
+  namespace: configius-kubernetest-test-1
   labels:
     app: configius-be
 spec:
